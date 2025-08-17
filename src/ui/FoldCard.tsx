@@ -13,7 +13,7 @@ export default function FoldCard() {
 
     const rotateX = (-y / 10).toFixed(2); 
     const rotateY = (x / 10).toFixed(2);
-
+ 
     setStyle({
       transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
     });
