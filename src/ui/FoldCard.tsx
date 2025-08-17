@@ -11,8 +11,8 @@ export default function FoldCard() {
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
 
-    const rotateX = (-y / 10).toFixed(2); 
-    const rotateY = (x / 10).toFixed(2);
+    const rotateX = (-y / 20).toFixed(2); 
+    const rotateY = (x / 20).toFixed(2);
  
     setStyle({
       transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
@@ -32,7 +32,7 @@ export default function FoldCard() {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      <h2>Fold Card</h2>
+      {/* <h2>Fold Card</h2> */}
     </div>
   );
 }
