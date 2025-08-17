@@ -10,8 +10,8 @@ export default function FoldCard() {
 
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
-    
-    const rotateX = (-y / 10).toFixed(2);
+
+    const rotateX = (-y / 10).toFixed(2); 
     const rotateY = (x / 10).toFixed(2);
 
     setStyle({
