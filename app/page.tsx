@@ -1,10 +1,27 @@
+// import FoldCard from "@/src/ui/FoldCard";
+// import React from "react";
+// import "@/src/styles/globalStyles.css";
+// import Image from "next/image";
+// import imgCursor from "@/public/Кнопка.svg";
+// import Module3D from "@/src/ui/Module3D";
+
+// export default function page() {
+//   return (
+//     <div>
+//       <FoldCard></FoldCard>
+//       <FoldCard></FoldCard>
+//       <Module3D />
+//     </div>
+//   );
+// }
+
 "use client";
 
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas, useLoader, useThree } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import { Group, TextureLoader } from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "three-stdlib";
 
 // Типизация для useGLTF
 type GLTFResult = {
@@ -48,7 +65,7 @@ function Background() {
   return null;
 }
 
-export default function Page() {
+export default function ModelViewer() {
   const [file, setFile] = useState<File | null>(null);
 
   return (
