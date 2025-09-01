@@ -1,9 +1,9 @@
 .fold-card {
   height: 340px;
   width: 540px;
-//   background: linear-gradient(135deg, #ff6b6b, #f06595);
+  //   background: linear-gradient(135deg, #ff6b6b, #f06595);
   background: url("../../public/bg.jpg");
-//   border-radius: 20px;
+  //   border-radius: 20px;
   margin: 200px auto;
   transition: transform 0.2s ease-out;
   transform-style: preserve-3d;
@@ -14,6 +14,9 @@
   color: white;
   font-size: 24px;
   font-weight: bold;
-//   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-
+  //   box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.products-header {
+  background: url("/path/to/bg.png") no-repeat center center;
+  background-size: cover; // или contain
 }

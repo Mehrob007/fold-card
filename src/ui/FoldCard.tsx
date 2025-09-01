@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 
-export default function FoldCard() {
+export default function FoldCard({ children }: { children?: ReactElement | string }) {
   const [style, setStyle] = useState<React.CSSProperties>({});
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -11,9 +11,9 @@ export default function FoldCard() {
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
 
-    const rotateX = (-y / 20).toFixed(2); 
+    const rotateX = (-y / 20).toFixed(2);
     const rotateY = (x / 20).toFixed(2);
- 
+
     setStyle({
       transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
     });
@@ -32,7 +32,7 @@ export default function FoldCard() {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      {/* <h2>Fold Card</h2> */}
+      {children}
     </div>
   );
 }
